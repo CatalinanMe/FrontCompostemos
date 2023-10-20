@@ -37,7 +37,7 @@ export default function SobreNosotrosSection() {
             Nuestro misión es promover el compostaje como una forma simple de
             reducir residuos y enriquecer la tierra. Proporcionamos recursos y
             apoyo para que las personas adopten el compostaje en su vida
-            cotidiana y fomentamos una comunidad comprometida con la
+            cotidiana y a su vez se cree una comunidad comprometida con la
             sostenibilidad.
           </p>
         </div>
