@@ -49,34 +49,73 @@ section {
   background: var(--cafe);
 }
 
+/* Inicio y banner */
 /*CSS Pagina principal*/
 .inicio {
-  display: flex;
+  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #ffffff;
+  display: block;
   align-items: start;
   justify-content: start;
-  min-height: 100vh;
-  background: white;
+  margin-top: 70.19px;
 }
 
-.inicio > .content {
-  max-width: 55rem;
+.banner {
+  background-color: ffffff;
+  width: 100%; /* Ajusta la altura máxima según tus necesidades */
+  max-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -140px;
+}
+.banner > img {
+  width: 200%;
+  max-width: 90vw;
+  height: auto;
+  margin: auto;
+}
+
+.row-banner {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.figura1 {
+  background-color: rgb(255, 255, 255);
+  max-width: 70%;
+}
+.figura1 > img {
+  width: 80%;
+  height: auto;
+  margin-right: -20px;
+  margin-left: 100px;
+}
+
+.content-text > .content {
+  max-width: 80rem;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
   text-align: left;
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
+  background: rgb(110, 212, 41);
+  padding: 3rem;
+  border-radius: 80px;
 }
 
-.inicio > .content > h3 {
-  font-size: 6rem;
-  color: #333;
+.content-text > .content > h3 {
+  font-size: 5rem;
+  color: #355f43;
   text-align: left;
 }
 
-.inicio > .content > span {
+.content-text > .content > span {
   font-size: 3.5rem;
   color: var(--cafe);
   padding: 1rem 0;
@@ -84,7 +123,7 @@ section {
   text-align: left;
 }
 
-.inicio > .content > p {
+.content-text > .content > p {
   font-size: 1.5rem;
   color: #999;
   padding: 1rem 0;
@@ -92,16 +131,18 @@ section {
   text-align: left;
 }
 
-/*Sobre nosostros*/
-.sobre-nosotros .row {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding: 2rem 0;
-  padding-bottom: 3rem;
+.fixed-image {
+  position: fixed;
+  bottom: 0;
+  right: 0; /* Cambiamos 'right' a 'left' para posicionar en la esquina izquierda */
 }
-.sobre-nosotros .row .imagen-container {
+
+.fixed-logo {
+  max-width: 150px; /* Tamaño máximo del logotipo, ajústalo según tus necesidades */
+}
+
+/*Sobre nosostros*/
+/* .sobre-nosotros .row .imagen-container {
   flex: 1 1 40rem;
   position: relative;
 }
@@ -137,7 +178,7 @@ section {
   padding: 0.5rem 0;
   padding-top: 1rem;
   line-height: 1.5;
-}
+} */
 
 /*Media Queries*/
 
@@ -193,4 +234,100 @@ section {
   .titulo {
     font-size: 3rem;
   }
+}
+
+/* codigo dani */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card1 {
+  background-image: url("./images/textura-verde-y-agua-1546\ \(1\).jpg");
+  background-blend-mode: multiply;
+  background-color: #a0c05e;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+  height: 300px;
+  margin-right: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px 2px #888888;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: aliceblue;
+}
+.card2 {
+  background-image: url("./images/shutterstock_499161889.jpg");
+  background-color: #92d709; /* Fondo blanco */
+  background-size: 400px 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+  height: 300px;
+  margin-right: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card3 {
+  background-image: url("./images/bigstock-Ecology-Compost-Supply-Kitch-338507758.webp");
+  background-size: 400px 320px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+  height: 300px;
+  margin-right: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card4 {
+  background-image: url("./images/texturas-hojas-hd-photoshop\ \(1\).jpg");
+  background-color: #c59a69;
+  background-blend-mode: multiply;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+  height: 300px;
+  margin-right: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px 2px #888888;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: aliceblue;
+}
+.card5 {
+  background-image: url("./images/Textura-grafiato-04.jpg");
+  background-blend-mode: multiply;
+  background-color: #ffcc05;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+  height: 300px;
+  margin-right: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px 2px #888888;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: aliceblue;
+}
+.card6 {
+  background-image: url("./images/compost_love.jpg.1900x0_q85.jpg");
+  background-size: 400px 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+  height: 300px;
+  margin-right: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }

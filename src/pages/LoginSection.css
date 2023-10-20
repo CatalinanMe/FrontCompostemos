@@ -1,0 +1,46 @@
+.login-section {
+  max-width: 300px;
+  margin: 100px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-section h2 {
+  text-align: center;
+}
+
+.login-section input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-section button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-section button:hover {
+  background-color: #0056b3;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+}
+
+.login-image {
+  margin-top: 100px;
+  margin-left: 100px;
+  max-width: 500px; /* Ajusta el ancho de la imagen según tu diseño */
+  margin-right: 40px; /* Agrega margen entre la imagen y el formulario */
+}

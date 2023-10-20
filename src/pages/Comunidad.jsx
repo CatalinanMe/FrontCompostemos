@@ -1,4 +1,8 @@
 import "./Comunidad.css";
+import Emoji from "../images/emoji.png";
+import Imagen from "../images/imagen.png";
+import MeGusta from "../images/meGusta.png";
+import Comentario from "../images/comentario.png";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import UserIcon from "../component/utilidades/UserIcon";
@@ -35,6 +39,7 @@ export default function Comunidad() {
             <a href="#">Mostrar Más</a>
           </div>
         </div>
+
         <div className="main-content">
           <div className="escribir-post-container">
             <div className="user-profile">
@@ -45,64 +50,63 @@ export default function Comunidad() {
                 {/* quitar y ademas quitar .user-profile small en comunidad.css */}
               </div>
             </div>
+
             <div className="post-input-container">
               <textarea
                 rows="3"
                 placeholder="Que estas pensando, Carlos?"
               ></textarea>
               <div className="add-post-links">
-                {/* si desea agregar foto, emoji
                 <a href="#">
-                  <img src="" alt="" />
+                  <img src={Imagen} alt="" />
                   Foto/video
                 </a>
                 <a href="#">
-                  <img src="" alt="" />
+                  <img src={Emoji} alt="" />
                   Emoji
                 </a>
-               */}
+                <button className="post-button">Publicar</button>
               </div>
             </div>
           </div>
           {data.length && (
             <div className="post-container">
               {data.map((item) => (
-                <div key={item.postId}>
+                <div key={item.postId} className="post">
                   <div className="post-row">
                     <div className="user-profile">
                       <UserIcon nombre={item.usuarioNombre} />
-                      {/* avatar de la persona */}
                       <div>
-                        <p>{item.postTitulo}</p>
-                        {/* username de la persona */}
+                        <p>{item.usuarioNombre}</p>
                         <span>{item.createdAt}</span>
-                        {/* fecha de publicación */}
                       </div>
                     </div>
                     <a href="#"></a>
-                    {/* editar publicación */}
                   </div>
                   <p className="post-text">{item.postTexto}</p>
+                  {/*<img
+                    src={item.postImg}
+                    className="post-img"
+                    alt="Post Image"
+              />*/}
+                  <div className="post-row">
+                    <div className="activity-icons">
+                      <div>
+                        <a href="#">
+                          <img src={MeGusta} alt="" />
+                        </a>
+                        20
+                      </div>
+                      <div>
+                        <a href="#">
+                          <img src={Comentario} alt="" />
+                        </a>
+                        4
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))}
-              {/* contenido del post */}
-              <img src="" className="post-img" alt="Post Image" />
-              {/* si es que el post lleva imagen */}
-              <div className="post-row">
-                <div className="activity-icons">
-                  <div>
-                    <i className="fa-solid fa-heart"></i>20
-                  </div>
-                  {/* me gusta */}
-                  <div>
-                    <i className="fa-regular fa-comment"></i>4
-                  </div>
-                  {/* comentarios */}
-                </div>
-                {/* <div className="post-profile-icon">
-                <img src="" alt="Post Profile Icon" />
-              </div>  comentarios */}
-              </div>
             </div>
           )}
         </div>
